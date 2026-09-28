@@ -9,24 +9,41 @@
 
     <title>Form Registrasi</title>
     <style>
+        fieldset:first-child{
+            margin-top: 0;
+        }
+        fieldset{
+            margin-top: 30px;
+        }
         fieldset div {
             width: max-content;
         }
 
         .input {
             display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin: 20px 0;
-            gap: 10px;
+            margin: 18px 0;
         }
 
-        .area {
-            display: flex;
-            justify-content: end;
-            flex: 1;
-            gap: 5px;
+        .input span {
+            margin-right: 4px;
         }
+
+        .input>label {
+            width: 250px;
+        }
+        form fieldset:nth-child(2) .input>label {
+            width: 130px;
+        }
+
+        .input>select {
+            margin-right: 4px;
+        }
+
+        .jk {
+            width: max-content !important;
+            margin-right: 4px;
+        }
+
     </style>
 </head>
 
@@ -38,62 +55,94 @@
             <div>
                 <div class="input">
                     <label for="nama">Nama</label>
-                    <span>: <input id="nama" type="text" name="text_form" size="20" placeholder="Nama Anda"></span>
+                    <span>:</span>
+                    <input id="nama" type="text" name="text_form" size="20" placeholder="Nama Anda">
                 </div>
                 <div class="input">
                     <label for="nama">Nomor Induk Mahasiswa (NIM)</label>
-                    <span>: <input type="text" name="text_form" size="20" placeholder="123456789"></span>
+                    <span>:</span>
+                    <input type="text" name="text_form" size="20" placeholder="123456789">
                 </div>
                 <div class="input">
                     <label for="nama">Alamat Mahasiswa</label>
-                    <span class="area">:<textarea name="textarea_form" rows="8"
-                            placeholder="Alamat Anda"></textarea></span>
+                    <span class="area">:</span>
+                    <textarea name="textarea_form" rows="8" cols="30" placeholder="Alamat Anda"></textarea>
                 </div>
                 <div class="input">
                     <label for="nama">Tanggal Lahir</label>
-                    <span>:
-                        <select name="pilihan">
-                            <option value="1" selected>01</option>
-                            <option value="2">02</option>
-                            <option value="3">03</option>
-                            <option value="4">04</option>
-                            <option value="5">05</option>
-                        </select>
+                    <span>:</span>
+                    <select name="pilihan">
+                        <option value="1" selected>01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                    </select>
 
-                        <select name="bulan">
-                            <option value="1" selected>Januari</option>
-                            <option value="2">Februari</option>
-                            <option value="3">Maret</option>
-                            <option value="4">April</option>
-                            <option value="5">Mei</option>
-                        </select>
+                    <select name="bulan">
+                        <option value="1" selected>Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                    </select>
 
-                        <select name="tahun">
-                            <option value="1" selected>1990</option>
-                            <option value="2">1991</option>
-                            <option value="3">1992</option>
-                            <option value="4">1993</option>
-                            <option value="5">1994</option>
-                        </select></span>
+                    <select name="tahun">
+                        <option value="1" selected>1990</option>
+                        <option value="2">1991</option>
+                        <option value="3">1992</option>
+                        <option value="4">1993</option>
+                        <option value="5">1994</option>
+                    </select>
                 </div>
-
-
-                <p>Jenis Kelamin : </p>
-                <input type="radio" name="radio" value="Pria" id="Pria" chacked><label for="Pria">Pria</label>
-                <input type="radio" name="radio" value="Wanita" id="Wanita"><label for="Wanita">Wanita</label>
-
-                <p>Upload Foto : <input type="file" name="text_form" size="20" placeholder="URL Website Anda"></p>
-                <p>URL Website : <input type="text" name="text_form" size="20" placeholder="URL Website Anda"></p>
-                <p>Perguruan Tinggi : <input type="text" name="text_form" size="20"></p>
+                <div class="input">
+                    <label for="nama">Jenis Kelamin</label>
+                    <span class="area">:</span>
+                    <input type="radio" name="radio" value="Pria" id="Pria" chacked><label for="Pria"
+                        class="jk">Pria</label>
+                    <input type="radio" name="radio" value="Wanita" id="Wanita"><label for="Wanita"
+                        class="jk">Wanita</label>
+                </div>
+                <div class="input">
+                    <label for="nama">Upload Foto</label>
+                    <span class="area">:</span>
+                    <input type="file" name="text_form" size="20" placeholder="URL Website Anda">
+                </div>
+                <div class="input">
+                    <label for="nama">URL Website</label>
+                    <span class="area">:</span>
+                    <input type="text" name="text_form" size="20" placeholder="URL Website Anda">
+                </div>
+                <div class="input">
+                    <label for="nama">Perguruan Tinggi </label>
+                    <span class="area">:</span>
+                    <input type="text" name="text_form" size="20">
+                </div>
             </div>
         </fieldset>
+
         <fieldset>
             <legend>Info Akun</legend>
-            <p>Email : <input type="email" name="email_form" size="20" placeholder="Email Anda"></p>
-            <p>Username : <input type="text" name="text_form" size="20" placeholder="Username Anda"></p>
-            <p>Password : <input type="password" name="password_form" size="20" placeholder="Password Anda"></p>
-            <p>Ulangi Password : <input type="password" name="password_form" size="20" placeholder="Password Anda"></p>
-
+            <div class="input">
+                <label for="nama">Email </label>
+                <span class="area">:</span>
+                <input type="email" name="email_form" size="20" placeholder="Email Anda">
+            </div>
+            <div class="input">
+                <label for="nama">Username </label>
+                <span class="area">:</span>
+                <input type="text" name="text_form" size="20" placeholder="Username Anda">
+            </div>
+            <div class="input">
+                <label for="nama">Password </label>
+                <span class="area">:</span>
+                <input type="password" name="password_form" size="20" placeholder="Password Anda">
+            </div>
+            <div class="input">
+                <label for="nama">Ulangi Password </label>
+                <span class="area">:</span>
+                <input type="password" name="password_form" size="20" placeholder="Password Anda">
+            </div>
         </fieldset>
 
         <fieldset>
@@ -107,13 +156,12 @@
             <input type="checkbox" name="Laravel" value="Laravel" id="Laravel"><label for="Laravel">Laravel</label>
             <input type="checkbox" name="React Native" value="React Native" id="React Native"><label
                 for="React Native">React Native</label>
+            </fieldset>
             <p>
-                <br>
                 <input type="reset" value="Reset">
                 <input type="submit" value="Submit">
                 <input type="button" value="Button">
             </p>
-        </fieldset>
     </form>
 </body>
 
