@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Syenia Azzahrama">
+
+    <title>Form Registrasi</title>
+    <style>
+        fieldset div {
+            width: max-content;
+        }
+
+        .input {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 20px 0;
+            gap: 10px;
+        }
+
+        .area {
+            display: flex;
+            justify-content: end;
+            flex: 1;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Form Registrasi</h2>
+    <form action="get">
+        <fieldset>
+            <legend>Biodata</legend>
+            <div>
+                <div class="input">
+                    <label for="nama">Nama</label>
+                    <span>: <input id="nama" type="text" name="text_form" size="20" placeholder="Nama Anda"></span>
+                </div>
+                <div class="input">
+                    <label for="nama">Nomor Induk Mahasiswa (NIM)</label>
+                    <span>: <input type="text" name="text_form" size="20" placeholder="123456789"></span>
+                </div>
+                <div class="input">
+                    <label for="nama">Alamat Mahasiswa</label>
+                    <span class="area">:<textarea name="textarea_form" rows="8"
+                            placeholder="Alamat Anda"></textarea></span>
+                </div>
+                <div class="input">
+                    <label for="nama">Tanggal Lahir</label>
+                    <span>:
+                        <select name="pilihan">
+                            <option value="1" selected>01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                        </select>
+
+                        <select name="bulan">
+                            <option value="1" selected>Januari</option>
+                            <option value="2">Februari</option>
+                            <option value="3">Maret</option>
+                            <option value="4">April</option>
+                            <option value="5">Mei</option>
+                        </select>
+
+                        <select name="tahun">
+                            <option value="1" selected>1990</option>
+                            <option value="2">1991</option>
+                            <option value="3">1992</option>
+                            <option value="4">1993</option>
+                            <option value="5">1994</option>
+                        </select></span>
+                </div>
+
+
+                <p>Jenis Kelamin : </p>
+                <input type="radio" name="radio" value="Pria" id="Pria" chacked><label for="Pria">Pria</label>
+                <input type="radio" name="radio" value="Wanita" id="Wanita"><label for="Wanita">Wanita</label>
+
+                <p>Upload Foto : <input type="file" name="text_form" size="20" placeholder="URL Website Anda"></p>
+                <p>URL Website : <input type="text" name="text_form" size="20" placeholder="URL Website Anda"></p>
+                <p>Perguruan Tinggi : <input type="text" name="text_form" size="20"></p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Info Akun</legend>
+            <p>Email : <input type="email" name="email_form" size="20" placeholder="Email Anda"></p>
+            <p>Username : <input type="text" name="text_form" size="20" placeholder="Username Anda"></p>
+            <p>Password : <input type="password" name="password_form" size="20" placeholder="Password Anda"></p>
+            <p>Ulangi Password : <input type="password" name="password_form" size="20" placeholder="Password Anda"></p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Kemampuan Dasar</legend>
+            <input type="checkbox" name="HTML" value="HTML" id="cHTML"><label for="HTML">HTML</label>
+            <input type="checkbox" name="CSS" value="CSS" id="CSS"><label for="CSS">CSS</label>
+            <input type="checkbox" name="Javascript" value="Javascript" id="Javascript"><label
+                for="Javascript">Javascript</label>
+            <input type="checkbox" name="PHP" value="PHP" id="PHP"><label for="PHP">PHP</label>
+            <input type="checkbox" name="MySQL" value="MySQL" id="MySQL"><label for="MySQL">MySQL</label>
+            <input type="checkbox" name="Laravel" value="Laravel" id="Laravel"><label for="Laravel">Laravel</label>
+            <input type="checkbox" name="React Native" value="React Native" id="React Native"><label
+                for="React Native">React Native</label>
+            <p>
+                <br>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+                <input type="button" value="Button">
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
